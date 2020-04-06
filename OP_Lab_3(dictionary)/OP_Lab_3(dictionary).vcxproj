@@ -147,7 +147,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="HashFunction.cpp" />
     <ClCompile Include="OP_Lab_3(dictionary).cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HashFunction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
