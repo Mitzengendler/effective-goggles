@@ -148,10 +148,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="HashFunction.cpp" />
+    <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="OP_Lab_3(dictionary).cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HashFunction.h" />
+    <ClInclude Include="LinkedList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
