@@ -17,7 +17,8 @@ private:
 	cell* head;
 public:
 	LinkedList();
-	void addEl(std::string word, std::string definition);
-	void print();
+	void addEl(string word, string definition);
+	void printDef(string word);
 	int getSize();
+	void clear();
 };

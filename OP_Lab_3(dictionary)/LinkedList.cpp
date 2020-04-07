@@ -1,7 +1,6 @@
 #include "LinkedList.h"
 
-cell::cell(string word, string def, cell* pNext)
-{
+cell::cell(string word, string def, cell* pNext) {
 	this->word = word;
 	this->definition = def;
 	this->next = pNext;
@@ -26,15 +25,26 @@ void LinkedList::addEl(string word, string definition) {
 	this->size++;
 }
 
-void LinkedList::print() {
+void LinkedList::printDef(string word) {
 	cell* temp = this->head;
 	while (temp != nullptr) {
-		cout <<"Word: " << temp->word << endl << "Definition: " << temp->definition << endl;
+		if (temp->word == word) {
+			cout << "Word: " << temp->word << endl << "Definition: " << temp->definition << endl;
+			break;
+		}
 		temp = temp->next;
 	}
 }
 
-int LinkedList::getSize()
-{
+int LinkedList::getSize() {
 	return this->size;
+}
+
+void LinkedList::clear() {
+	for (int i = 0; i < this->size;) {
+		cell* temp = this->head;
+		this->head = temp->next;
+		this->size--;
+		delete temp;
+	}
 }

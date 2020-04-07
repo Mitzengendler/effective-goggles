@@ -1,7 +1,6 @@
 ﻿#include <iostream>
 #include <string>
-#include "HashFunction.h"
-#include "LinkedList.h"
+#include "HashTable.h"
 
 using namespace std;
 
@@ -15,14 +14,22 @@ int main()
     cin.clear();
     cout << "Enter definition: ";
     getline(cin, def);
-    LinkedList arr[10];
-    for (int i = 0; i < 10; i++) {
-        arr[i].addEl(word, def);
-    }
-    arr[0].addEl("123", "456");
-    for (int i = 0; i < 10; i++) {
-        cout << "Index: " << i << endl;
-        arr[i].print();
-    }
-    cout << "Size: " << arr[0].getSize();
+
+    HashTable a;
+
+    a.addEl(word, def);
+
+    cout << "Index 1: " << a.hashFun(word) << endl;
+
+    cout << "Enter word: ";
+    getline(cin, word);
+    cin.clear();
+    cout << "Enter definition: ";
+    getline(cin, def);
+
+    a.addEl(word, def);
+
+    cout << "Index 2: " << a.hashFun(word) << endl;
+
+    a.printEl(word);
 }
