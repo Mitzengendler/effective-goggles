@@ -17,8 +17,8 @@ private:
 	cell* head;
 public:
 	LinkedList();
+	~LinkedList();
 	void addEl(string word, string definition);
 	void printDef(string word);
 	int getSize();
-	void clear();
 };

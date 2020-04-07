@@ -11,6 +11,16 @@ LinkedList::LinkedList() {
 	this->head = nullptr;
 }
 
+LinkedList::~LinkedList()
+{
+	for (int i = 0; i < this->size;) {
+		cell* temp = this->head;
+		this->head = temp->next;
+		this->size--;
+		delete temp;
+	}
+}
+
 void LinkedList::addEl(string word, string definition) {
 	if (this->head == nullptr) {
 		this->head = new cell(word, definition);
@@ -38,13 +48,4 @@ void LinkedList::printDef(string word) {
 
 int LinkedList::getSize() {
 	return this->size;
-}
-
-void LinkedList::clear() {
-	for (int i = 0; i < this->size;) {
-		cell* temp = this->head;
-		this->head = temp->next;
-		this->size--;
-		delete temp;
-	}
 }
