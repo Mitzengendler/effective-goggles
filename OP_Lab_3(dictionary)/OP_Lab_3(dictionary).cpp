@@ -9,27 +9,23 @@ int main()
     cout << "Hello World!\n";
     string word;
     string def;
-    cout << "Enter word: ";
-    getline(cin, word);
-    cin.clear();
-    cout << "Enter definition: ";
-    getline(cin, def);
 
+
+    int i = 15;
     HashTable a;
+    while (i != 0) {
+        cout << "Enter word: ";
+        getline(cin, word);
+        cin.clear();
+        cout << "Enter definition: ";
+        getline(cin, def);
 
-    a.addEl(word, def);
+        a.addEl(word, def);
 
-    cout << "Index 1: " << a.hashFun(word) << endl;
+        cout << "Index : " << a.hashFun(word) << endl;
 
-    cout << "Enter word: ";
-    getline(cin, word);
-    cin.clear();
-    cout << "Enter definition: ";
-    getline(cin, def);
+        a.printEl(word);
 
-    a.addEl(word, def);
-
-    cout << "Index 2: " << a.hashFun(word) << endl;
-
-    a.printEl(word);
+        i--;
+    }
 }
