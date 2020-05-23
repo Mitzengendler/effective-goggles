@@ -1,31 +1,15 @@
 ﻿#include <iostream>
 #include <string>
 #include "HashTable.h"
+#include "DictReader.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello World!\n";
-    string word;
-    string def;
-
-
-    int i = 15;
+    cout << "Hello user1!\n";
+    cout << "Please wait when dictionary will be loaded.\n";
     HashTable a;
-    while (i != 0) {
-        cout << "Enter word: ";
-        getline(cin, word);
-        cin.clear();
-        cout << "Enter definition: ";
-        getline(cin, def);
 
-        a.addEl(word, def);
-
-        cout << "Index : " << a.hashFun(word) << endl;
-
-        a.printEl(word);
-
-        i--;
-    }
+    fillDict(a);
 }

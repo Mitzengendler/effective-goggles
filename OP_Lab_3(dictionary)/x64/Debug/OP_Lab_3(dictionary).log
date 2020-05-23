@@ -1,6 +1,2 @@
-﻿  HashTable.cpp
-C:\gitrepo\effective-goggles\OP_Lab_3(dictionary)\HashTable.cpp(15,27): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-  LinkedList.cpp
-  OP_Lab_3(dictionary).cpp
-  Создание кода...
+﻿  OP_Lab_3(dictionary).cpp
   OP_Lab_3(dictionary).vcxproj -> C:\gitrepo\effective-goggles\OP_Lab_3(dictionary)\x64\Debug\OP_Lab_3(dictionary).exe

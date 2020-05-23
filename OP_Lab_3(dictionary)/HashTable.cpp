@@ -2,7 +2,7 @@
 
 HashTable::HashTable()
 {
-    size = 5000;
+    size = 5000000;
     linkedArr = new LinkedList[size];
 }
 
