@@ -31,9 +31,19 @@ void printRes(HashTable x)
         if (word == "0") {
             break;
         }
+        word = toUpper(word);
         cin.clear();
         x.printEl(word);
         cout << "And another one: ";
     }
     cout << "Fin.";
+    exit(0);
+}
+
+string toUpper(string word) {
+    for (int i = 0; i < word.length(); i++) {
+        word[i] = toupper(word[i]);
+    }
+
+    return word;
 }

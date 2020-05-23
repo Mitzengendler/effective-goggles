@@ -7,3 +7,4 @@
 
 void fillDict(HashTable x);
 void printRes(HashTable x);
+string toUpper(string word);
