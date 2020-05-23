@@ -6,3 +6,4 @@
 #include "HashTable.h"
 
 void fillDict(HashTable x);
+void printRes(HashTable x);
