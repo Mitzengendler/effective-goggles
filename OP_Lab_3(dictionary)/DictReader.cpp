@@ -28,12 +28,24 @@ void printRes(HashTable x)
     cout << "Type your word here(or '0' to stop the program): ";
     while (word != "0") {
         getline(cin, word);
+        vector<string> line;
         if (word == "0") {
             break;
         }
-        word = toUpper(word);
-        cin.clear();
-        x.printEl(word);
+        //
+        string input = word;
+        istringstream ss(input);
+        string token;
+
+        while (getline(ss, token, ' ')) {
+            line.push_back(token);
+        }
+        //
+        for (int i = 0; i < line.size(); i++) {
+            
+            word = toUpper(line[i]);
+            x.printEl(word);
+        }
         cout << "And another one: ";
     }
     cout << "Fin.";
@@ -44,6 +56,5 @@ string toUpper(string word) {
     for (int i = 0; i < word.length(); i++) {
         word[i] = toupper(word[i]);
     }
-
     return word;
 }
